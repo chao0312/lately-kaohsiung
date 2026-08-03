@@ -5,6 +5,11 @@
   <title>最近高雄</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    if (/Chrome\/|Chromium\//.test(navigator.userAgent)) {
+      document.documentElement.classList.add('is-blink');
+    }
+  </script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -66,12 +71,12 @@
       </div>
     </div>
     <nav class="sitehead__menu" aria-label="分類選單">
-      <span class="cat-toggle sitehead__menu-oval" data-cat="week" role="button" tabindex="0" aria-pressed="false">本週推薦</span>
-      <span class="cat-toggle sitehead__menu-oval" data-cat="plant" role="button" tabindex="0" aria-pressed="false">植物</span>
-      <span class="cat-toggle sitehead__menu-oval" data-cat="animal" role="button" tabindex="0" aria-pressed="false">動物</span>
-      <span class="cat-toggle sitehead__menu-oval" data-cat="sky" role="button" tabindex="0" aria-pressed="false">天文地景</span>
-      <span class="cat-toggle sitehead__menu-oval" data-cat="taste" role="button" tabindex="0" aria-pressed="false">當季滋味</span>
-      <span class="cat-toggle sitehead__menu-oval" data-cat="workshop" role="button" tabindex="0" aria-pressed="false">工作坊</span>
+      <span class="cat-toggle sitehead__menu-oval" data-cat="week" role="button" tabindex="0" aria-pressed="false" aria-label="本週推薦"><span>本</span><span>週</span><span>推</span><span>薦</span></span>
+      <span class="cat-toggle sitehead__menu-oval" data-cat="plant" role="button" tabindex="0" aria-pressed="false" aria-label="植物"><span>植</span><span>物</span></span>
+      <span class="cat-toggle sitehead__menu-oval" data-cat="animal" role="button" tabindex="0" aria-pressed="false" aria-label="動物"><span>動</span><span>物</span></span>
+      <span class="cat-toggle sitehead__menu-oval" data-cat="sky" role="button" tabindex="0" aria-pressed="false" aria-label="天文地景"><span>天</span><span>文</span><span>地</span><span>景</span></span>
+      <span class="cat-toggle sitehead__menu-oval" data-cat="taste" role="button" tabindex="0" aria-pressed="false" aria-label="當季滋味"><span>當</span><span>季</span><span>滋</span><span>味</span></span>
+      <span class="cat-toggle sitehead__menu-oval" data-cat="workshop" role="button" tabindex="0" aria-pressed="false" aria-label="工作坊"><span>工</span><span>作</span><span>坊</span></span>
     </nav>
   </div>
   <div class="sitehead__toolrow toolrow">
@@ -138,7 +143,7 @@
     </article>
 
     <div class="divider cat-toggle" data-cat="sky" role="button" tabindex="0" aria-pressed="false">
-      <div class="divider__oval">天文地景</div>
+      <div class="divider__oval" aria-hidden="true"><span>天</span><span>文</span><span>地</span><span>景</span></div>
       <p class="divider__desc">太陽下山後，左營才剛要開始。</p>
       <span class="divider__cta">看更多 →</span>
     </div>
@@ -174,7 +179,7 @@
     </article>
 
     <div class="divider cat-toggle" data-cat="plant" role="button" tabindex="0" aria-pressed="false">
-      <div class="divider__oval">植物</div>
+      <div class="divider__oval" aria-hidden="true"><span>植</span><span>物</span></div>
       <p class="divider__desc">發芽、開花、結果，每一步都是線索。</p>
       <span class="divider__cta">看更多 →</span>
     </div>

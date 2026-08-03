@@ -77,6 +77,11 @@ h1,h2,h3,p{ margin:0; }
   color:var(--ink); flex:0 0 auto;
 }
 .brand-mark span{ display:block; text-align:center; }
+/* Blink paints CJK 900 lighter than Safari — thicken only there. */
+html.is-blink .brand-mark{
+  -webkit-text-stroke:0.038em var(--ink);
+  paint-order:stroke fill;
+}
 
 .toolrow{
   display:flex; align-items:center; justify-content:space-between;
@@ -149,21 +154,27 @@ h1,h2,h3,p{ margin:0; }
 }
 .sitehead__weather{
   text-align:center; font-size:0.82rem; font-weight:600;
-  padding:0.5rem 1.25rem;
+  padding:0.8rem 1.25rem;
   border-top:1px solid var(--ink);
   border-bottom:1px solid var(--ink);
 }
+.sitehead{
+  --oval-h:clamp(7.5rem,18vw,11rem);
+}
 .sitehead__brandrow{
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex; align-items:stretch; justify-content:space-between;
   gap:clamp(1rem,3vw,2.5rem);
-  padding:1.35rem 1.5rem 1.1rem;
+  padding:2rem 1.5rem 1.75rem;
 }
 .sitehead__identity{
-  display:flex; align-items:center; gap:clamp(0.9rem,2vw,1.6rem); min-width:0;
+  display:flex; align-items:flex-end; gap:clamp(0.9rem,2vw,1.6rem); min-width:0;
 }
 .sitehead .brand-mark{
-  font-size:clamp(2.6rem,6.5vw,4.4rem);
-  width:clamp(5.4rem,13vw,8.6rem);
+  height:var(--oval-h); width:var(--oval-h);
+  grid-template-columns:auto auto; grid-template-rows:auto auto;
+  align-content:center; justify-content:center;
+  /* Two tight rows fill the oval height; glyphs stay packed. */
+  font-size:calc(var(--oval-h) * 0.58); line-height:0.86; letter-spacing:-0.06em;
 }
 .sitehead__taglines{
   display:flex; flex-direction:column; gap:0.15rem;
@@ -171,19 +182,23 @@ h1,h2,h3,p{ margin:0; }
 }
 .sitehead__menu{
   flex:0 1 auto; display:flex; align-items:stretch;
-  gap:clamp(0.3rem,0.9vw,0.55rem); min-height:clamp(6.5rem,16vw,9.5rem);
+  gap:clamp(0.3rem,0.9vw,0.55rem); min-height:var(--oval-h);
 }
 .sitehead__menu-oval, .divider__oval{
   font-family:"DFKai-SB","BiauKai","Kaiti TC","Kaiti SC","STKaiti","楷体",KaiTi,serif;
   font-weight:700; letter-spacing:0;
 }
 .sitehead__menu-oval{
-  flex:0 0 auto; width:clamp(2.6rem,4.2vw,3.5rem); color:#1A1A1A;
-  display:flex; align-items:center; justify-content:center;
-  writing-mode:vertical-rl; text-orientation:upright;
-  font-size:clamp(1rem,1.8vw,1.25rem);
+  flex:0 0 auto; width:clamp(2.4rem,3.8vw,3.2rem); color:#1A1A1A;
+  display:flex; flex-direction:column; align-items:center; justify-content:space-between;
+  padding:6% 0;
+  font-size:clamp(1.15rem,2.1vw,1.45rem); line-height:1;
   border-radius:50%; cursor:pointer; transition:transform .15s ease, filter .15s ease;
   border:2px solid #1A1A1A;
+}
+.sitehead__menu-oval > span,
+.divider__oval > span{
+  display:block; line-height:1;
 }
 .sitehead__menu-oval:hover{ transform:translateY(-3px); filter:brightness(1.08); }
 .sitehead__menu-oval[data-cat="week"]{ background:var(--cat-week); }
@@ -290,10 +305,9 @@ h1,h2,h3,p{ margin:0; }
 .divider__oval{
   width:56%; aspect-ratio:1/2.15; border-radius:50%; border:2.5px solid #1A1A1A;
   color:#1A1A1A;
-  display:flex; align-items:center; justify-content:center;
-  writing-mode:vertical-rl; text-orientation:upright;
-  font-size:clamp(1.1rem,2.2vw,1.3rem);
-  padding:0.4rem 0;
+  display:flex; flex-direction:column; align-items:center; justify-content:space-between;
+  font-size:clamp(1.25rem,2.5vw,1.5rem); line-height:1;
+  padding:6% 0;
 }
 .divider[data-cat="week"] .divider__oval{ background:var(--cat-week); }
 .divider[data-cat="plant"] .divider__oval{ background:var(--cat-plant); }
@@ -338,7 +352,8 @@ footer .credit{ font-size:0.78rem; color:var(--ink-faint); }
 
 @media (max-width:760px){
   .sitehead__brandrow{ flex-wrap:wrap; padding:1rem 1.1rem 0.85rem; }
-  .sitehead__menu{ width:100%; justify-content:flex-start; min-height:5.5rem; }
+  .sitehead{ --oval-h:5.5rem; }
+  .sitehead__menu{ width:100%; justify-content:flex-start; }
   .sitehead__taglines{ font-size:0.9rem; }
   .floatingbar{ display:none !important; }
 }

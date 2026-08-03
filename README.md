@@ -7,10 +7,11 @@ Homepage prototype.
 ## Run locally
 
 ```bash
-python3 -m http.server 8765
+npm install
+npm run dev
 ```
 
-Open [http://127.0.0.1:8765/](http://127.0.0.1:8765/).
+Opens with live reload at [http://127.0.0.1:5173/](http://127.0.0.1:5173/).
 
 ## Structure
 
