@@ -5,6 +5,7 @@
   <title>最近左營</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <script>
     if (/Chrome\/|Chromium\//.test(navigator.userAgent)) {
       document.documentElement.classList.add('is-blink');
@@ -54,13 +55,19 @@
 
 <section class="section" id="phenomena">
   <div class="view-toggle" role="group" aria-label="切換檢視方式">
-    <button type="button" class="view-toggle__btn is-active" data-view="list">最近清單</button>
-    <button type="button" class="view-toggle__btn" data-view="map">左營地圖</button>
+    <button type="button" class="view-toggle__btn is-active" data-view="list">
+      <svg class="view-toggle__icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+      卡片
+    </button>
+    <button type="button" class="view-toggle__btn" data-view="map">
+      <svg class="view-toggle__icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>
+      地圖
+    </button>
   </div>
 
   <div class="grid-feed" id="gridFeed">
 
-    <article class="card" data-status="active" data-category="plant" data-x="26%" data-y="42%">
+    <article class="card" data-status="active" data-category="plant" data-lat="22.6885" data-lng="120.2951">
       <div class="card__photo">
         <img src="images/qipan-jiao.jpg" alt="棋盤腳的花與果實，長長的花絲垂在葉叢間" loading="lazy">
         <button class="heart" aria-pressed="false" aria-label="加入收藏">
@@ -75,7 +82,7 @@
       </div>
     </article>
 
-    <article class="card" data-status="active" data-category="animal" data-x="58%" data-y="24%">
+    <article class="card" data-status="active" data-category="animal" data-lat="22.6822" data-lng="120.2938">
       <div class="card__photo">
         <img src="images/taiwan-barbet.jpg" alt="台灣特有亞種五色鳥，停在電線上" loading="lazy">
         <button class="heart" aria-pressed="false" aria-label="加入收藏">
@@ -90,7 +97,7 @@
       </div>
     </article>
 
-    <article class="card" data-status="upcoming" data-category="taste" data-x="78%" data-y="60%">
+    <article class="card" data-status="upcoming" data-category="taste" data-lat="22.6960" data-lng="120.2968">
       <div class="card__photo">
         <img src="images/water-caltrop.jpg" alt="三顆黑色菱角平放在白色桌面上" loading="lazy">
         <button class="heart" aria-pressed="false" aria-label="加入收藏">
@@ -105,7 +112,7 @@
       </div>
     </article>
 
-    <article class="card" data-status="active" data-category="plant" data-x="74%" data-y="70%">
+    <article class="card" data-status="active" data-category="plant" data-lat="22.6968" data-lng="120.2975">
       <div class="card__photo">
         <img src="images/bougainvillea.jpg" alt="盛開的桃紅色九重葛花叢" loading="lazy">
         <button class="heart" aria-pressed="false" aria-label="加入收藏">
@@ -120,7 +127,7 @@
       </div>
     </article>
 
-    <article class="card" data-status="ending" data-category="week" data-x="50%" data-y="16%">
+    <article class="card" data-status="ending" data-category="week" data-lat="22.6845" data-lng="120.2932">
       <div class="card__photo">
         <img src="images/temple-parade.jpg" alt="高雄廟會現場，舞獅隊伍與廟宇裝飾" loading="lazy">
         <button class="heart" aria-pressed="false" aria-label="加入收藏">
@@ -135,7 +142,7 @@
       </div>
     </article>
 
-    <article class="card" data-status="active" data-category="sky" data-x="64%" data-y="32%">
+    <article class="card" data-status="active" data-category="sky" data-lat="22.6820" data-lng="120.3010">
       <div class="card__photo">
         <img src="images/east-gate.jpg" alt="左營舊城東門，紅磚城垛與拱形門洞" loading="lazy">
         <button class="heart" aria-pressed="false" aria-label="加入收藏">
@@ -153,22 +160,14 @@
   </div>
 
   <div class="map-view is-hidden" id="mapView">
-    <div class="map-view__canvas" id="mapCanvas">
-      <svg class="map-view__bg rough" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <g fill="none" stroke="var(--ink)" stroke-width="0.5" opacity="0.3">
-          <path d="M0,55 C20,50 35,62 55,54 C72,48 88,58 100,52" />
-          <path d="M46,0 C42,15 50,25 45,40 C40,55 48,70 44,90" />
-          <path d="M0,15 C15,20 28,10 42,16 C55,21 65,12 78,18 C88,22 94,14 100,18" />
-        </g>
-        <path class="map-view__lake" d="M10,40 C6,48 9,58 18,60 C28,62 34,52 31,43 C28,34 15,32 10,40 Z" />
-        <rect class="map-view__oldcity" x="40" y="8" width="34" height="30" rx="4" ry="4" />
-      </svg>
-    </div>
-    <div class="map-sheet" id="mapSheet">
-      <button type="button" class="map-sheet__close" id="mapSheetClose" aria-label="關閉">
-        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-      </button>
-      <div class="map-sheet__body" id="mapSheetBody"></div>
+    <div class="map-frame" id="mapFrame">
+      <div class="map-sheet" id="mapSheet">
+        <button type="button" class="map-sheet__close" id="mapSheetClose" aria-label="關閉">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+        <div class="map-sheet__body" id="mapSheetBody"></div>
+      </div>
+      <div class="map-view__canvas" id="mapCanvas"></div>
     </div>
   </div>
 </section>
@@ -198,7 +197,7 @@
         <path d="M40 64 L34 84 M56 66 L58 86"/>
       </svg>
       <div>
-        <p class="about__text">最近左營，是一個由在地居民共同記錄的地方筆記。分享那些因為季節、天氣和地方生活而出現，最近值得去看看的事情。</p>
+        <p class="about__text">最近左營，是一個由在地居民共同記錄的地方筆記。這裡記錄左營隨著季節而出現的生態現象和地方生活，分享那些最近值得去看看的事情。希望透過這些觀察，讓更多人看見左營一年四季不同的樣貌，以及生活在這裡的各種生命。</p>
         <p class="about__bubble">五色鳥：最近龍眼很甜內。</p>
       </div>
     </div>
@@ -209,6 +208,7 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script type="module" src="app.js"></script>
 </body>
 </html>
