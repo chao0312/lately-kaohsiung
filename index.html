@@ -22,40 +22,13 @@
 <div class="floatingbar" id="floatingbar">
   <div class="floatingbar__row">
     <a href="#top" class="brand-mark" aria-label="最近高雄"><span>最</span><span>近</span><span>高</span><span>雄</span></a>
-    <div class="floatingbar__menu serif-ui">
+    <div class="floatingbar__menu">
       <label class="cat-toggle check-item" data-cat="week"><span class="check-item__box"></span>本週推薦</label>
       <label class="cat-toggle check-item" data-cat="animal"><span class="check-item__box"></span>動物</label>
       <label class="cat-toggle check-item" data-cat="plant"><span class="check-item__box"></span>植物</label>
       <label class="cat-toggle check-item" data-cat="sky"><span class="check-item__box"></span>天文地景</label>
       <label class="cat-toggle check-item" data-cat="taste"><span class="check-item__box"></span>當季滋味</label>
       <label class="cat-toggle check-item" data-cat="workshop"><span class="check-item__box"></span>工作坊</label>
-    </div>
-  </div>
-  <div class="floatingbar__row toolrow">
-    <div class="toolrow__links serif-ui">
-      <a href="#submit">投稿</a>
-      <a href="#modules">現象更新</a>
-    </div>
-    <div class="toolrow__actions">
-      <div class="search-wrap">
-        <button type="button" class="search-btn" aria-label="搜尋" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        </button>
-        <div class="search-panel">
-          <input type="search" class="search-input" placeholder="搜尋地方現象...">
-        </div>
-      </div>
-      <div class="viewtoggle">
-        <button type="button" class="btn-card-view is-active" aria-pressed="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
-          卡片
-        </button>
-        <button type="button" class="btn-map-view" aria-pressed="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20 3 18V6l6 2m0 12 6-2m-6 2V8m6 10 6 2V8l-6-2m0 14V6m0 0-6 2"/></svg>
-          地圖
-        </button>
-      </div>
-      <a href="#" class="avatar" aria-label="帳號" title="帳號"></a>
     </div>
   </div>
 </div>
@@ -79,37 +52,9 @@
       <span class="cat-toggle sitehead__menu-oval" data-cat="workshop" role="button" tabindex="0" aria-pressed="false" aria-label="工作坊"><span>工</span><span>作</span><span>坊</span></span>
     </nav>
   </div>
-  <div class="sitehead__toolrow toolrow">
-    <div class="toolrow__links serif-ui">
-      <a href="#submit">投稿</a>
-      <a href="#modules">現象更新</a>
-    </div>
-    <div class="toolrow__actions">
-      <div class="search-wrap">
-        <button type="button" class="search-btn" aria-label="搜尋" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        </button>
-        <div class="search-panel">
-          <input type="search" class="search-input" placeholder="搜尋地方現象...">
-        </div>
-      </div>
-      <div class="viewtoggle">
-        <button type="button" class="btn-card-view is-active" aria-pressed="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
-          卡片
-        </button>
-        <button type="button" class="btn-map-view" aria-pressed="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20 3 18V6l6 2m0 12 6-2m-6 2V8m6 10 6 2V8l-6-2m0 14V6m0 0-6 2"/></svg>
-          地圖
-        </button>
-      </div>
-      <a href="#" class="login-link serif-ui">登入</a>
-    </div>
-  </div>
 </header>
 
 <section class="section" id="phenomena">
-
   <div class="grid-feed" id="gridFeed">
 
     <article class="card" data-status="active" data-category="plant">
@@ -142,12 +87,6 @@
       </div>
     </article>
 
-    <div class="divider cat-toggle" data-cat="sky" role="button" tabindex="0" aria-pressed="false">
-      <div class="divider__oval" aria-hidden="true"><span>天</span><span>文</span><span>地</span><span>景</span></div>
-      <p class="divider__desc">太陽下山後，左營才剛要開始。</p>
-      <span class="divider__cta">看更多 →</span>
-    </div>
-
     <article class="card" data-status="upcoming" data-category="taste">
       <div class="card__photo">
         <img src="images/water-caltrop.jpg" alt="三顆黑色菱角平放在白色桌面上" loading="lazy">
@@ -177,12 +116,6 @@
         <p class="card__meta">最近一次注意到 · 5 小時前</p>
       </div>
     </article>
-
-    <div class="divider cat-toggle" data-cat="plant" role="button" tabindex="0" aria-pressed="false">
-      <div class="divider__oval" aria-hidden="true"><span>植</span><span>物</span></div>
-      <p class="divider__desc">發芽、開花、結果，每一步都是線索。</p>
-      <span class="divider__cta">看更多 →</span>
-    </div>
 
     <article class="card" data-status="ending" data-category="week">
       <div class="card__photo">
@@ -215,37 +148,25 @@
     </article>
 
   </div>
-
-  <div class="mapview" id="mapView">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 20 3 18V6l6 2m0 12 6-2m-6 2V8m6 10 6 2V8l-6-2m0 14V6m0 0-6 2"/></svg>
-    <p>地圖檢視開發中——之後會用地圖標出樹蔭、鳥類、花期、當季食物、地方活動的位置。</p>
-  </div>
 </section>
 
-<section class="modules" id="modules">
-  <div class="modules__head">接下來</div>
-  <div class="modules__list">
-    <div class="module">
-      <span class="module__name">月曆</span>
-      <span class="module__tag">尚未上線</span>
-      <p>七月正在發生、八月即將開始、九月值得期待——一年之中，高雄會出現哪些地方現象。</p>
-    </div>
-    <div class="module">
-      <span class="module__name">地圖</span>
-      <span class="module__tag">尚未上線</span>
-      <p>不是景點地圖，而是地方現象地圖：樹蔭、鳥類、花期、當季食物、地方活動。</p>
-    </div>
-    <div class="module">
-      <span class="module__name">投稿</span>
-      <span class="module__tag">尚未上線</span>
-      <p>最近注意到什麼？地點、日期、照片，還有為什麼值得分享——也是大家一起記錄開花、結果這些進度的地方。</p>
-    </div>
-  </div>
+<section class="contributors" id="contributors">
+  <div class="contributors__head">貢獻者</div>
+  <p class="contributors__intro">這個網站上的照片，目前向以下攝影師借用做示範：</p>
+  <ul class="contributors__list">
+    <li><span class="contributors__name">Mmsmr</span><span class="contributors__note">CC0</span></li>
+    <li><span class="contributors__name">Charles J. Sharp</span><span class="contributors__note">CC BY-SA 4.0</span></li>
+    <li><span class="contributors__name">Yuksing</span><span class="contributors__note">Public Domain</span></li>
+    <li><span class="contributors__name">Gaurav Dhwaj Khadka</span><span class="contributors__note">CC BY-SA 4.0</span></li>
+    <li><span class="contributors__name">Cmglee</span><span class="contributors__note">CC BY-SA 3.0</span></li>
+    <li><span class="contributors__name">Wuaiw</span><span class="contributors__note">CC BY-SA 4.0</span></li>
+  </ul>
+  <p class="contributors__note-full">之後上線，這裡會換成真正在高雄拍到這些畫面的人。</p>
 </section>
 
 <footer id="about">
   <div class="about__block">
-    <div class="about__head">關於</div>
+    <div class="about__head">關於這個網站</div>
     <div class="about__row">
       <svg class="about__bird rough" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="50" cy="50" r="16"/>
@@ -263,9 +184,8 @@
     <span class="credit">最近高雄 · 一份持續生長的地方筆記</span>
     <span class="credit">首頁 Prototype</span>
   </div>
-  <p class="photo-credit">照片來源（Wikimedia Commons）：Mmsmr（CC0）、Charles J. Sharp（CC BY-SA 4.0）、Yuksing（Public Domain）、Gaurav Dhwaj Khadka（CC BY-SA 4.0）、Cmglee（CC BY-SA 3.0）、Wuaiw（CC BY-SA 4.0）——實際上線時會替換為使用者投稿照片。</p>
 </footer>
 
-<script src="app.js"></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>
