@@ -34,7 +34,7 @@
 </div>
 
 <header class="sitehead" id="top">
-  <div class="sitehead__weather serif-ui"><span id="todayDate">今天</span> 午後雷陣雨 33°C</div>
+  <div class="sitehead__weather serif-ui"><span id="todayDate">今天</span> <span id="weatherText">天氣讀取中…</span></div>
   <div class="sitehead__brandrow">
     <div class="sitehead__identity">
       <h1 class="brand-mark"><span>最</span><span>近</span><span>左</span><span>營</span></h1>
@@ -67,93 +67,87 @@
 
   <div class="grid-feed" id="gridFeed">
 
-    <article class="card" data-status="active" data-category="plant" data-lat="22.6885" data-lng="120.2951">
+    <article class="card" data-status="active" data-category="animal" data-lat="22.6907" data-lng="120.2951"
+      data-location="蓮池潭龍虎塔旁" data-notes="親鳥護幼中，請保持距離，不要驚擾。">
+      <div class="card__photo">
+        <img src="images/moorhen-chick.jpg" alt="紅冠水雞成鳥帶著幼鳥在水面覓食" loading="lazy">
+      </div>
+      <div class="card__body">
+        <span class="pill"><span class="dot"></span>正在發生</span>
+        <h3 class="card__title">紅冠水雞生寶寶了</h3>
+        <p class="card__desc">蓮池潭龍虎塔旁，紅冠水雞生小寶寶了。</p>
+        <div class="card__observer"><span class="avatar" data-cat="animal">阿</span><span>阿明</span></div>
+        <p class="card__meta">最近一次注意到 · 1 天前</p>
+      </div>
+    </article>
+
+    <article class="card" data-status="active" data-category="plant" data-lat="22.6978" data-lng="120.2938"
+      data-location="洲仔濕地公園" data-notes="夜間光線昏暗，建議攜帶手電筒並注意路滑。">
       <div class="card__photo">
         <img src="images/qipan-jiao.jpg" alt="棋盤腳的花與果實，長長的花絲垂在葉叢間" loading="lazy">
-        <button class="heart" aria-pressed="false" aria-label="加入收藏">
-          <svg viewBox="0 0 24 24"><path d="M12 20.5c-.3 0-.6-.1-.8-.3C7.6 17 3 13 3 8.9 3 6.2 5.1 4 7.8 4c1.6 0 3.1.8 4.2 2.2C13.1 4.8 14.6 4 16.2 4 18.9 4 21 6.2 21 8.9c0 4.1-4.6 8.1-8.2 11.3-.2.2-.5.3-.8.3Z"/></svg>
-        </button>
       </div>
       <div class="card__body">
         <span class="pill"><span class="dot"></span>正在發生</span>
-        <h3 class="card__title">棋盤腳花季</h3>
-        <p class="card__desc">蓮池潭畔的棋盤腳，每天傍晚六點半前後綻放，徹夜盛放，天亮前凋落——只留給早起與晚歸的人。</p>
-        <p class="card__meta">開花時間 · 約 18:30</p>
+        <h3 class="card__title">棋盤腳進入花季</h3>
+        <p class="card__desc">洲仔濕地的棋盤腳進入花季，晚上六點到七點開花。</p>
+        <div class="card__observer"><span class="avatar" data-cat="plant">小</span><span>小華</span></div>
+        <p class="card__meta">開花時間 · 18:00–19:00</p>
       </div>
     </article>
 
-    <article class="card" data-status="active" data-category="animal" data-lat="22.6822" data-lng="120.2938">
+    <article class="card" data-status="active" data-category="plant" data-lat="22.6828" data-lng="120.2995"
+      data-location="見城之道（東門段）" data-notes="為住家與店家庭院果樹，請只賞不採。">
       <div class="card__photo">
-        <img src="images/taiwan-barbet.jpg" alt="台灣特有亞種五色鳥，停在電線上" loading="lazy">
-        <button class="heart" aria-pressed="false" aria-label="加入收藏">
-          <svg viewBox="0 0 24 24"><path d="M12 20.5c-.3 0-.6-.1-.8-.3C7.6 17 3 13 3 8.9 3 6.2 5.1 4 7.8 4c1.6 0 3.1.8 4.2 2.2C13.1 4.8 14.6 4 16.2 4 18.9 4 21 6.2 21 8.9c0 4.1-4.6 8.1-8.2 11.3-.2.2-.5.3-.8.3Z"/></svg>
-        </button>
+        <img src="images/longan.jpg" alt="龍眼樹枝頭結實累累" loading="lazy">
       </div>
       <div class="card__body">
         <span class="pill"><span class="dot"></span>正在發生</span>
-        <h3 class="card__title">老榕結果</h3>
-        <p class="card__desc">舊城牆邊的老榕陸續結果，五色鳥、白頭翁整天在樹冠間穿梭，比平常吵一些。</p>
-        <p class="card__meta">最近一次注意到 · 2 小時前</p>
+        <h3 class="card__title">蓮霧、龍眼結果了</h3>
+        <p class="card__desc">見城之道旁的蓮霧樹跟龍眼樹在結果。</p>
+        <div class="card__observer"><span class="avatar" data-cat="plant">珠</span><span>阿珠</span></div>
+        <p class="card__meta">最近一次注意到 · 3 天前</p>
       </div>
     </article>
 
-    <article class="card" data-status="upcoming" data-category="taste" data-lat="22.6960" data-lng="120.2968">
+    <article class="card" data-status="active" data-category="taste" data-lat="22.6775" data-lng="120.2935"
+      data-location="哈囉市場" data-notes="數量有限，建議提早前往。">
       <div class="card__photo">
         <img src="images/water-caltrop.jpg" alt="三顆黑色菱角平放在白色桌面上" loading="lazy">
-        <button class="heart" aria-pressed="false" aria-label="加入收藏">
-          <svg viewBox="0 0 24 24"><path d="M12 20.5c-.3 0-.6-.1-.8-.3C7.6 17 3 13 3 8.9 3 6.2 5.1 4 7.8 4c1.6 0 3.1.8 4.2 2.2C13.1 4.8 14.6 4 16.2 4 18.9 4 21 6.2 21 8.9c0 4.1-4.6 8.1-8.2 11.3-.2.2-.5.3-.8.3Z"/></svg>
-        </button>
       </div>
       <div class="card__body">
-        <span class="pill"><span class="dot"></span>即將開始</span>
-        <h3 class="card__title">第一批菱角</h3>
-        <p class="card__desc">果貿市場出現本季第一批菱角，還帶著泥土的濕氣，量不多，賣完等下一批。</p>
-        <p class="card__meta">預估 · 3 天後</p>
+        <span class="pill"><span class="dot"></span>正在發生</span>
+        <h3 class="card__title">第一批菱角上市</h3>
+        <p class="card__desc">哈囉市場開始賣今年第一批菱角了。</p>
+        <div class="card__observer"><span class="avatar" data-cat="taste">陳</span><span>陳老闆</span></div>
+        <p class="card__meta">上市時間 · 這幾天</p>
       </div>
     </article>
 
-    <article class="card" data-status="active" data-category="plant" data-lat="22.6968" data-lng="120.2975">
+    <article class="card" data-status="active" data-category="taste" data-lat="22.6865" data-lng="120.3045"
+      data-location="大城老船麵（大路）" data-notes="每日限量，售完即止。">
+      <div class="card__photo">
+        <img src="images/mango-sticky-rice.jpg" alt="芒果切片鋪在椰奶糯米飯上" loading="lazy">
+      </div>
+      <div class="card__body">
+        <span class="pill"><span class="dot"></span>正在發生</span>
+        <h3 class="card__title">芒果糯米飯開賣</h3>
+        <p class="card__desc">大城老船麵的芒果糯米飯開賣了。</p>
+        <div class="card__observer"><span class="avatar" data-cat="taste">吉</span><span>阿吉</span></div>
+        <p class="card__meta">販售時間 · 每日限量</p>
+      </div>
+    </article>
+
+    <article class="card" data-status="active" data-category="plant" data-lat="22.6968" data-lng="120.2975"
+      data-location="果貿社區" data-notes="花期估計還可持續兩週左右。">
       <div class="card__photo">
         <img src="images/bougainvillea.jpg" alt="盛開的桃紅色九重葛花叢" loading="lazy">
-        <button class="heart" aria-pressed="false" aria-label="加入收藏">
-          <svg viewBox="0 0 24 24"><path d="M12 20.5c-.3 0-.6-.1-.8-.3C7.6 17 3 13 3 8.9 3 6.2 5.1 4 7.8 4c1.6 0 3.1.8 4.2 2.2C13.1 4.8 14.6 4 16.2 4 18.9 4 21 6.2 21 8.9c0 4.1-4.6 8.1-8.2 11.3-.2.2-.5.3-.8.3Z"/></svg>
-        </button>
       </div>
       <div class="card__body">
         <span class="pill"><span class="dot"></span>正在發生</span>
         <h3 class="card__title">九重葛盛開</h3>
         <p class="card__desc">果貿社區幾條巷子的九重葛開得正盛，牆面幾乎染成一片桃紅。</p>
+        <div class="card__observer"><span class="avatar" data-cat="plant">里</span><span>里長伯</span></div>
         <p class="card__meta">最近一次注意到 · 5 小時前</p>
-      </div>
-    </article>
-
-    <article class="card" data-status="ending" data-category="week" data-lat="22.6845" data-lng="120.2932">
-      <div class="card__photo">
-        <img src="images/temple-parade.jpg" alt="高雄廟會現場，舞獅隊伍與廟宇裝飾" loading="lazy">
-        <button class="heart" aria-pressed="false" aria-label="加入收藏">
-          <svg viewBox="0 0 24 24"><path d="M12 20.5c-.3 0-.6-.1-.8-.3C7.6 17 3 13 3 8.9 3 6.2 5.1 4 7.8 4c1.6 0 3.1.8 4.2 2.2C13.1 4.8 14.6 4 16.2 4 18.9 4 21 6.2 21 8.9c0 4.1-4.6 8.1-8.2 11.3-.2.2-.5.3-.8.3Z"/></svg>
-        </button>
-      </div>
-      <div class="card__body">
-        <span class="pill"><span class="dot"></span>快結束了</span>
-        <h3 class="card__title">舊城城隍廟繞境</h3>
-        <p class="card__desc">三天繞境進入尾聲，本週末是最後一天，鑼鼓聲會比平常晚一點停。</p>
-        <p class="card__meta">剩 · 2 天</p>
-      </div>
-    </article>
-
-    <article class="card" data-status="active" data-category="sky" data-lat="22.6820" data-lng="120.3010">
-      <div class="card__photo">
-        <img src="images/east-gate.jpg" alt="左營舊城東門，紅磚城垛與拱形門洞" loading="lazy">
-        <button class="heart" aria-pressed="false" aria-label="加入收藏">
-          <svg viewBox="0 0 24 24"><path d="M12 20.5c-.3 0-.6-.1-.8-.3C7.6 17 3 13 3 8.9 3 6.2 5.1 4 7.8 4c1.6 0 3.1.8 4.2 2.2C13.1 4.8 14.6 4 16.2 4 18.9 4 21 6.2 21 8.9c0 4.1-4.6 8.1-8.2 11.3-.2.2-.5.3-.8.3Z"/></svg>
-        </button>
-      </div>
-      <div class="card__body">
-        <span class="pill"><span class="dot"></span>正在發生</span>
-        <h3 class="card__title">城牆樹蔭</h3>
-        <p class="card__desc">下午兩點過後，東門城牆邊的老樹開始拉出一整片陰涼，是在地人午後散步的固定路線。</p>
-        <p class="card__meta">最近一次注意到 · 昨天</p>
       </div>
     </article>
 
@@ -165,6 +159,9 @@
         <button type="button" class="map-sheet__close" id="mapSheetClose" aria-label="關閉">
           <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
         </button>
+        <button type="button" class="map-sheet__collapse" id="mapSheetCollapse" aria-label="收合面板">
+          <svg viewBox="0 0 24 24" width="14" height="14"><path d="M15 5 L8 12 L15 19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </button>
         <div class="map-sheet__body" id="mapSheetBody"></div>
       </div>
       <div class="map-view__canvas" id="mapCanvas"></div>
@@ -172,16 +169,26 @@
   </div>
 </section>
 
+<div class="card-modal" id="cardModal">
+  <div class="card-modal__backdrop" id="cardModalBackdrop"></div>
+  <div class="card-modal__panel" id="cardModalPanel">
+    <button type="button" class="card-modal__close" id="cardModalClose" aria-label="關閉">
+      <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <div class="card-modal__body" id="cardModalBody"></div>
+  </div>
+</div>
+
 <section class="contributors" id="contributors">
   <div class="contributors__head">在地觀察員</div>
   <p class="contributors__intro">這個網站上的照片，目前向以下攝影師借用做示範：</p>
   <ul class="contributors__list">
-    <li><span class="contributors__name">Mmsmr</span><span class="contributors__note">CC0</span></li>
-    <li><span class="contributors__name">Charles J. Sharp</span><span class="contributors__note">CC BY-SA 4.0</span></li>
-    <li><span class="contributors__name">Yuksing</span><span class="contributors__note">Public Domain</span></li>
-    <li><span class="contributors__name">Gaurav Dhwaj Khadka</span><span class="contributors__note">CC BY-SA 4.0</span></li>
-    <li><span class="contributors__name">Cmglee</span><span class="contributors__note">CC BY-SA 3.0</span></li>
-    <li><span class="contributors__name">Wuaiw</span><span class="contributors__note">CC BY-SA 4.0</span></li>
+    <li><span class="avatar avatar--sm" data-cat="plant">M</span><span class="contributors__name">Mmsmr</span><span class="contributors__note">CC0</span></li>
+    <li><span class="avatar avatar--sm" data-cat="taste">Y</span><span class="contributors__name">Yuksing</span><span class="contributors__note">Public Domain</span></li>
+    <li><span class="avatar avatar--sm" data-cat="plant">G</span><span class="contributors__name">Gaurav Dhwaj Khadka</span><span class="contributors__note">CC BY-SA 4.0</span></li>
+    <li><span class="avatar avatar--sm" data-cat="animal">R</span><span class="contributors__name">Rhododendrites</span><span class="contributors__note">CC BY-SA 4.0</span></li>
+    <li><span class="avatar avatar--sm" data-cat="plant">F</span><span class="contributors__name">Forest &amp; Kim Starr</span><span class="contributors__note">CC BY 3.0</span></li>
+    <li><span class="avatar avatar--sm" data-cat="taste">A</span><span class="contributors__name">Arthur Taksin</span><span class="contributors__note">CC BY 4.0</span></li>
   </ul>
   <p class="contributors__note-full">之後上線，這裡會換成真正在高雄拍到這些畫面的人。</p>
 </section>
@@ -190,15 +197,18 @@
   <div class="about__block">
     <div class="about__head">關於這個網站</div>
     <div class="about__row">
-      <svg class="about__bird rough" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="50" cy="50" r="16"/>
-        <path d="M64 46 L82 38 L68 56 Z"/>
-        <circle cx="44" cy="46" r="2" fill="currentColor" stroke="none"/>
-        <path d="M40 64 L34 84 M56 66 L58 86"/>
-      </svg>
+      <div class="about__bird-wrap">
+        <p class="about__bird-bubble">最近龍眼很甜內。</p>
+        <svg class="about__bird rough" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="50" cy="50" r="16"/>
+          <path d="M64 46 L82 38 L68 56 Z"/>
+          <circle cx="44" cy="46" r="2" fill="currentColor" stroke="none"/>
+          <path d="M40 64 L34 84 M56 66 L58 86"/>
+        </svg>
+      </div>
       <div>
-        <p class="about__text">最近左營，是一個由在地居民共同記錄的地方筆記。這裡記錄左營隨著季節而出現的生態現象和地方生活，分享那些最近值得去看看的事情。希望透過這些觀察，讓更多人看見左營一年四季不同的樣貌，以及生活在這裡的各種生命。</p>
-        <p class="about__bubble">五色鳥：最近龍眼很甜內。</p>
+        <p class="about__text"><strong>《最近左營》</strong>：一個由在地居民共同記錄的地方筆記。這裡記錄左營隨著季節而出現的生態現象和地方生活，分享最近值得去看看的事情。希望透過這些觀察，讓更多人看見左營一年四季不同的樣貌，以及生活在這裡的各種生命。</p>
+        <p class="about__cta">如果你也想加入觀察、一起記錄左營，歡迎<a href="https://forms.gle/Ln8WBNaK5s8fggTYA" class="about__cta-link" target="_blank" rel="noopener">申請加入我們的觀察群組</a>（目前先請填一份簡單表單，避免不明人士直接加入）。</p>
       </div>
     </div>
   </div>
