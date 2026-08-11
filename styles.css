@@ -396,17 +396,26 @@ html.is-blink .brand-mark{
 .contributors{ padding:3rem 1.25rem 3.5rem; border-top:2.5px solid var(--ink); }
 .contributors__head{ font-weight:900; color:var(--ink); font-size:clamp(1.8rem,5vw,2.6rem); margin-bottom:1rem; }
 .contributors__intro{ font-size:0.95rem; color:var(--ink-soft); max-width:34rem; margin-bottom:1.2rem; }
-.contributors__list{
-  list-style:none; margin:0 0 1.2rem; padding:0; max-width:34rem;
-  display:flex; flex-direction:column; gap:0.55rem;
-}
-.contributors__list li{
-  display:flex; align-items:center; gap:0.6rem;
-  padding-bottom:0.55rem; border-bottom:1px solid var(--line);
-}
-.contributors__name{ font-weight:700; font-size:0.95rem; }
-.contributors__note{ margin-left:auto; font-size:0.78rem; color:var(--ink-faint); white-space:nowrap; }
 .contributors__note-full{ font-size:0.82rem; color:var(--ink-faint); max-width:34rem; }
+
+.observer-list{ list-style:none; margin:0 0 1.5rem; padding:0; max-width:36rem; }
+.observer-item{ border-bottom:1px solid var(--line); }
+.observer-item__toggle{
+  display:flex; align-items:center; gap:0.65rem; width:100%;
+  background:none; border:none; padding:0.85rem 0; cursor:pointer; text-align:left; font:inherit;
+}
+.observer-item__name{ flex:1; font-weight:700; font-size:1rem; color:var(--ink); }
+.observer-item__chevron{ flex:0 0 auto; color:var(--ink-faint); transition:transform .2s ease; }
+.observer-item__toggle[aria-expanded="true"] .observer-item__chevron{ transform:rotate(180deg); }
+.observer-item__body{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .25s ease; }
+.observer-item.is-open .observer-item__body{ grid-template-rows:1fr; }
+.observer-item__body-inner{ overflow:hidden; }
+.observer-item__body-inner p{ font-size:0.88rem; color:var(--ink-soft); line-height:1.65; margin:0 0 0.7rem; }
+.observer-item__meta{ font-size:0.78rem; color:var(--ink-faint); }
+.observer-item__link{
+  display:inline-block; font-size:0.82rem; font-weight:700; color:var(--ink);
+  text-decoration:underline; text-underline-offset:2px; margin:0.2rem 1rem 0.7rem 0;
+}
 
 /* ---------- footer / about ---------- */
 footer{ border-top:2.5px solid var(--ink); padding:3rem 1.25rem 2.6rem; }

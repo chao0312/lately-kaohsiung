@@ -217,6 +217,12 @@ viewToggleBtns.forEach(btn => btn.addEventListener('click', () => {
   }
 }));
 
+document.querySelectorAll('.observer-item__toggle').forEach(btn => btn.addEventListener('click', () => {
+  const item = btn.closest('.observer-item');
+  const isOpen = item.classList.toggle('is-open');
+  btn.setAttribute('aria-expanded', isOpen);
+}));
+
 const floatingbar = document.getElementById('floatingbar');
 const sitehead = document.querySelector('.sitehead');
 const onScroll = () => {
